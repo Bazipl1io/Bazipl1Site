@@ -1,0 +1,67 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url('https://img.goodfon.ru/original/2560x1440/3/6e/wallpaper-4k-ultra-hd-background-mask-neon-silhouette-anonym.jpg');
+}
+
+/* Обёртка страницы Home для центрирования карточки */
+.container {
+  width: 100%;
+  flex: 1; /* Занимает всё свободное пространство под MenuBar */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 20px 20px; /* 80px сверху — отступ под MenuBar */
+  box-sizing: border-box;
+}
+
+.card {
+  width: 500px;
+  max-width: 100%;
+  padding: 20px;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  box-sizing: border-box;
+
+  background: rgba(0, 0, 0, 0.8);
+  border: 2px solid lightblue;
+  border-radius: 4px;
+}
+
+.card a {
+  flex: 1 1 150px;
+
+  padding: 12px;
+
+  color: white;
+  text-decoration: none;
+  text-align: center;
+
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid lightblue; /* Исправлен пробел */
+  border-radius: 4px;
+
+  transition: 0.15s;
+}
+
+/* Наведение */
+.card a:hover {
+  background: rgba(120, 20, 20, 0.7);
+  border-color: orange;
+  color: orange;
+  cursor: pointer;
+}
+
+/* Нажатие */
+.card a:active {
+  background: rgba(70, 10, 10, 0.9);
+  transform: scale(0.96);
+}

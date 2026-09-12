@@ -1,0 +1,106 @@
+.menuButton {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+
+    width: 50px;
+    height: 50px;
+
+    border: 2px solid lightblue;
+    border-radius: 4px;
+
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+
+    font-size: 24px;
+
+    cursor: pointer;
+
+    z-index: 1001;
+
+    transition: 0.15s;
+}
+
+/* Наведение на кнопку меню */
+.menuButton:hover {
+    background: rgba(120, 20, 20, 0.7);
+    border-color: orange;
+    color: orange;
+}
+
+/* Нажатие */
+.menuButton:active {
+    background: rgba(70, 10, 10, 0.9);
+
+    transform: scale(0.96);
+}
+
+
+/* Фон поверх страницы */
+.overlay {
+    position: fixed;
+    inset: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(0, 0, 0, 0.4);
+
+    backdrop-filter: blur(8px);
+
+    z-index: 1000;
+}
+
+
+/* Карточка меню */
+.menuCard {
+    width: 350px;
+    padding: 25px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    box-sizing: border-box;
+
+    background: rgba(0, 0, 0, 0.8);
+    border: 2px solid lightblue;
+    border-radius: 4px;
+
+    backdrop-filter: blur(15px);
+}
+
+
+/* Кнопки меню */
+.menuCard a {
+    padding: 12px;
+
+    color: white;
+    text-decoration: none;
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid lightblue;
+    border-radius: 4px;
+
+    transition: 0.15s;
+}
+
+
+/* Наведение */
+.menuCard a:hover {
+    background: rgba(120, 20, 20, 0.7);
+    border-color: orange;
+    color: orange;
+
+    cursor: pointer;
+}
+
+
+/* Нажатие */
+.menuCard a:active {
+    background: rgba(70, 10, 10, 0.9);
+
+    transform: scale(0.96);
+}
