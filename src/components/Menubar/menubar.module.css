@@ -1,22 +1,37 @@
-.menuButton {
+/* Панель-облачко */
+.headerBar {
     position: fixed;
-    top: 20px;
-    left: 20px;
+    top: 15px;
+    left: 15px;
+    right: 15px; /* Задает ширину во весь экран с учетом отступов */
+    height: 60px;
 
-    width: 50px;
-    height: 50px;
-
-    border: 2px solid lightblue;
-    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    box-sizing: border-box;
 
     background: rgba(0, 0, 0, 0.8);
-    color: white;
-
-    font-size: 24px;
-
-    cursor: pointer;
+    border: 2px solid lightblue; /* Рамка со всех сторон */
+    border-radius: 12px; /* Скругление углов ("облачко") */
+    backdrop-filter: blur(10px);
 
     z-index: 1001;
+}
+
+/* Кнопка открытия меню */
+.menuButton {
+    width: 40px;
+    height: 40px;
+
+    border: 2px solid lightblue;
+    border-radius: 6px;
+
+    background: rgba(255, 255, 255, 0.05);
+    color: white;
+
+    font-size: 20px;
+    cursor: pointer;
 
     transition: 0.15s;
 }
@@ -31,7 +46,6 @@
 /* Нажатие */
 .menuButton:active {
     background: rgba(70, 10, 10, 0.9);
-
     transform: scale(0.96);
 }
 
@@ -46,7 +60,6 @@
     align-items: center;
 
     background: rgba(0, 0, 0, 0.4);
-
     backdrop-filter: blur(8px);
 
     z-index: 1000;
@@ -66,7 +79,7 @@
 
     background: rgba(0, 0, 0, 0.8);
     border: 2px solid lightblue;
-    border-radius: 4px;
+    border-radius: 8px;
 
     backdrop-filter: blur(15px);
 }
@@ -101,6 +114,5 @@
 /* Нажатие */
 .menuCard a:active {
     background: rgba(70, 10, 10, 0.9);
-
     transform: scale(0.96);
 }

@@ -1,0 +1,235 @@
+.contactsContainer {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 95px 20px 30px;
+  box-sizing: border-box;
+  color: white;
+}
+
+.contactsCard {
+  width: 100%;
+  padding: 30px;
+  box-sizing: border-box;
+  background: rgba(0, 0, 0, 0.8);
+  border: 2px solid lightblue;
+  border-radius: 8px;
+  backdrop-filter: blur(15px);
+}
+
+.title {
+  margin: 0 0 15px;
+  text-align: center;
+  font-size: 28px;
+}
+
+.locationSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 25px;
+  font-size: 16px;
+}
+
+.locationLabel {
+  color: #ccc;
+}
+
+.locationLink {
+  color: lightblue;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.15s;
+}
+
+.locationLink:hover {
+  color: orange;
+  text-decoration: underline;
+}
+
+.sectionsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.categoryBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.categoryTitle {
+  font-size: 18px;
+  font-weight: 700;
+  color: lightblue;
+  margin: 0 0 5px 2px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.contactsList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contactRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid lightblue;
+  border-radius: 6px;
+  transition: 0.15s;
+}
+
+.contactRow:hover {
+  border-color: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.contactTitle {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+/* Базовые стили для обеих кнопок */
+.actionBtn,
+.tagBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 130px;
+  padding: 8px 18px;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid lightblue;
+  border-radius: 4px;
+  cursor: pointer;
+  box-sizing: border-box;
+  outline: none;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+/* Эффект клика (нажатие) для всех кнопок */
+.actionBtn:active,
+.tagBtn:active {
+  transform: scale(0.94);
+}
+
+/* ------------------------------------------------------------- */
+/* БРЕНДОВЫЕ ЦВЕТА ПРИ НАВЕДЕНИИ (HOVER)                          */
+/* ------------------------------------------------------------- */
+
+/* Telegram (Голубой) */
+.telegram:hover {
+  background: rgba(0, 136, 204, 0.3);
+  border-color: #0088cc;
+  color: #0088cc;
+  box-shadow: 0 0 12px rgba(0, 136, 204, 0.4);
+}
+
+/* YouTube (Красный) */
+.youtube:hover {
+  background: rgba(255, 0, 0, 0.3);
+  border-color: #ff0000;
+  color: #ff0000;
+  box-shadow: 0 0 12px rgba(255, 0, 0, 0.4);
+}
+
+/* Twitch (Фиолетовый) */
+.twitch:hover {
+  background: rgba(145, 70, 255, 0.3);
+  border-color: #9146ff;
+  color: #9146ff;
+  box-shadow: 0 0 12px rgba(145, 70, 255, 0.4);
+}
+
+/* GitHub (Белый / Светло-серый) */
+.github:hover {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: #ffffff;
+  color: #ffffff;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.4);
+}
+
+/* LinkedIn (Синий) */
+.linkedin:hover {
+  background: rgba(10, 102, 194, 0.3);
+  border-color: #0a66c2;
+  color: #0a66c2;
+  box-shadow: 0 0 12px rgba(10, 102, 194, 0.4);
+}
+
+/* Discord (Серо-фиолетовый / Indigo) */
+.discord:hover {
+  background: rgba(88, 101, 242, 0.3);
+  border-color: #5865f2;
+  color: #5865f2;
+  box-shadow: 0 0 12px rgba(88, 101, 242, 0.4);
+}
+
+/* Всплывающее Toast-уведомление */
+.toast {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 12px 24px;
+  background: rgba(0, 0, 0, 0.9);
+  border: 2px solid lightblue;
+  border-radius: 6px;
+  color: white;
+  font-size: 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  z-index: 2000;
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 10px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+@media (max-width: 600px) {
+  .contactsContainer {
+    padding: 90px 15px 15px;
+  }
+
+  .contactsCard {
+    padding: 20px 15px;
+  }
+
+  .categoryTitle {
+    font-size: 16px;
+  }
+
+  .contactRow {
+    padding: 12px 15px;
+  }
+
+  .contactTitle {
+    font-size: 14px;
+  }
+
+  .actionBtn,
+  .tagBtn {
+    font-size: 13px;
+    padding: 6px 12px;
+    min-width: 100px;
+  }
+}

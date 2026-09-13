@@ -6,13 +6,17 @@ function MenuBar() {
 
     return (
         <>
-            <button
-                className={styles.menuButton}
-                onClick={() => setIsOpen(!isOpen)}
-            >
-                {isOpen ? "✕" : "☰"}
-            </button>
+            {/* Верхняя полоса на всю ширину */}
+            <header className={styles.headerBar}>
+                <button
+                    className={styles.menuButton}
+                    onClick={() => setIsOpen(!isOpen)}
+                >
+                    {isOpen ? "✕" : "☰"}
+                </button>
+            </header>
 
+            {/* Выпадающее меню */}
             {isOpen && (
                 <div
                     className={styles.overlay}
